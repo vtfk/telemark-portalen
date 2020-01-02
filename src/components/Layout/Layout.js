@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { Link, Route, withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import {
   Container,
   Typography,
@@ -10,11 +10,10 @@ import {
   IconButton,
   MenuItem,
   Menu,
-  InputBase,
   Drawer,
   ListItemIcon
 } from '@material-ui/core'
-import { makeStyles, fade } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 import logo from './logo.svg'
 
@@ -44,26 +43,6 @@ const useStyles = makeStyles(theme => ({
       display: 'none'
     }
   },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.black, 0.1),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(1),
-      width: 'auto'
-    },
-    marginRight: theme.spacing(1)
-  },
-  searchIcon: {
-    width: theme.spacing(7),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   inputRoot: {
     color: 'inherit'
   },
@@ -86,35 +65,6 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20
   }
 }))
-
-const SearchForm = ({ history: { push }, match }) => {
-  const classes = useStyles()
-  const [query, setQuery] = useState(match ? match.params.query : '')
-  function onSearch(event) {
-    event.preventDefault()
-    push(query ? `/sok/${query}` : '/')
-  }
-  function onChangeQuery(event) {
-    setQuery(event.target.value)
-  }
-  return (
-    <form onSubmit={onSearch} className={classes.search}>
-      <div className={classes.searchIcon}>
-        <Icon>search</Icon>
-      </div>
-      <InputBase
-        placeholder="Søk"
-        value={query}
-        classes={{
-          root: classes.inputRoot,
-          input: classes.inputInput
-        }}
-        onChange={onChangeQuery}
-        inputProps={{ 'aria-label': 'Søk' }}
-      />
-    </form>
-  )
-}
 
 const DropMenu = withRouter(({ logout, location }) => {
   const classes = useStyles()
@@ -202,12 +152,6 @@ const Layout = ({ children, logout, sidebar }) => {
             <img src={logo} alt="" className={classes.logo} />
             <span className={classes.logoText}>Portalen</span>
           </Typography>
-          <Route
-            path="/sok/:query"
-            children={props => {
-              return <SearchForm {...props} />
-            }}
-          />
           <DropMenu logout={logout} />
         </Toolbar>
       </AppBar>
