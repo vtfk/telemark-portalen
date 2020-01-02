@@ -5,17 +5,10 @@ import loadable from '@loadable/component'
 
 import TokenContext from '../../helpers/tokenContext'
 import Layout from '../../components/Layout/Layout'
-import Sidebar from './Sidebar'
 import { load as loadUser } from '../../redux/modules/user'
 
 const Dashboard = loadable(() =>
   import(/* webpackChunkName: "Dashboard" */ '../Dashboard/Dashboard')
-)
-const Search = loadable(() =>
-  import(/* webpackChunkName: "Search" */ '../Search/Search')
-)
-const Settings = loadable(() =>
-  import(/* webpackChunkName: "Settings" */ '../Settings/Settings')
 )
 
 const NotFound = loadable(() =>
@@ -36,11 +29,9 @@ const AppUser = ({ loadUser, authError }) => {
     }
   }, [authError, setToken])
   return (
-    <Layout logout={logoutAction} sidebar={<Sidebar />}>
+    <Layout logout={logoutAction}>
       <Switch>
         <Route component={Dashboard} path="/" exact />
-        <Route component={Settings} path="/innstillinger" />
-        <Route component={Search} path="/sok/:query" />
         <Route component={NotFound} />
       </Switch>
     </Layout>

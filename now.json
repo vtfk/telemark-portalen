@@ -2,6 +2,7 @@
   "version": 2,
   "name": "telemark-portalen",
   "scope": "telemark",
+  "alias": ["forsiden.portalen.t-fk.no"],
   "builds": [
     { "src": "/api/**/!(lib)/*.js", "use": "@now/node" },
     {
@@ -40,7 +41,6 @@
   ],
   "env": {
     "API_JWT_SECRET": "@portalen-jwt-key",
-    "PORTALEN_TASKS_JWT_KEY": "@portalen-tasks-jwt-key",
     "MOA_TENANT_ID": "@portalen-tendant-id",
     "MOA_CLIENT_ID": "@portalen-client-id",
     "MOA_CLIENT_SECRET": "@portalen-client-secret"

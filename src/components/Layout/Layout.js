@@ -10,7 +10,6 @@ import {
   IconButton,
   MenuItem,
   Menu,
-  Drawer,
   ListItemIcon
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -121,22 +120,10 @@ const DropMenu = withRouter(({ logout, location }) => {
 
 const Layout = ({ children, logout, sidebar }) => {
   const classes = useStyles()
-  const [drawerOpen, setDrawerOpen] = useState(false)
-  function toggleDrawer() {
-    setDrawerOpen(!drawerOpen)
-  }
   return (
     <>
       <AppBar position="static">
         <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="meny"
-            onClick={toggleDrawer}
-          >
-            <Icon>menu</Icon>
-          </IconButton>
           <Typography
             variant="h6"
             className={classes.barTitle}
@@ -149,9 +136,6 @@ const Layout = ({ children, logout, sidebar }) => {
           <DropMenu logout={logout} />
         </Toolbar>
       </AppBar>
-      <Drawer open={drawerOpen} onClose={toggleDrawer}>
-        {sidebar}
-      </Drawer>
       <Container className={classes.main}>{children}</Container>
     </>
   )
@@ -159,8 +143,7 @@ const Layout = ({ children, logout, sidebar }) => {
 
 Layout.propTypes = {
   children: PropTypes.any,
-  logout: PropTypes.func,
-  sidebar: PropTypes.any
+  logout: PropTypes.func
 }
 
 export default Layout
