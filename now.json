@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "name": "portalen-craco",
+  "scope": "telemark",
+  "builds": [
+    { "src": "/api/**/!(lib)/*.js", "use": "@now/node" },
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000, immutable" },
+      "continue": true
+    },
+    {
+      "src": "/service-worker.js",
+      "headers": { "cache-control": "s-maxage=0" },
+      "continue": true
+    },
+    {
+      "src": "/sockjs-node/(.*)",
+      "dest": "/sockjs-node/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "API_JWT_SECRET": "@portalen-jwt-key",
+    "PORTALEN_TASKS_JWT_KEY": "@portalen-tasks-jwt-key",
+    "DATABASE_URI": "@portalen-db-uri",
+    "MOA_TENANT_ID": "@portalen-tendant-id",
+    "MOA_CLIENT_ID": "@portalen-client-id",
+    "MOA_CLIENT_SECRET": "@portalen-client-secret"
+  }
+}
