@@ -4,26 +4,6 @@ const { createToken } = require('../lib/jwt')
 const { getRoles } = require('../lib/infoData')
 const { loadConfig } = require('../lib/authConfig')
 
-/*
-async function validateToken({ data, config }) {
-  const { keys, metadata, auth } = config
-  const decodedToken = jwt.decode(data.id_token, { complete: true })
-  const { x5c } = keys.find(key => decodedToken.header.x5t === key.x5t)
-  const pubCert = `-----BEGIN CERTIFICATE-----\n${x5c}\n-----END CERTIFICATE-----`
-  let verifiedToken = jwt.verify(data.id_token, pubCert)
-  if (verifiedToken.iss !== metadata.issuer) {
-    throw Error('Failed to login - Invalid issuer')
-  }
-  if (data.state !== auth.state) {
-    throw Error('Failed to login - Invalid state')
-  }
-  if (verifiedToken.nonce !== auth.nonce) {
-    throw Error('Failed to login - Invalid nonce')
-  }
-  return verifiedToken
-}
-*/
-
 async function getToken({ code, config }) {
   const payload = {
     client_id: config.auth.client_id,
