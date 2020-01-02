@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "portalen-craco",
+  "name": "telemark-portalen",
   "scope": "telemark",
   "builds": [
     { "src": "/api/**/!(lib)/*.js", "use": "@now/node" },
