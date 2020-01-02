@@ -58,7 +58,8 @@
     "test": "react-scripts test",
     "format": "prettier --write \"src/**/*.js\" \"api/**/*.js\" \"config-overrides.js\"",
     "precommit": "pretty-quick --staged",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm i"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
+    "postinstall": "cd api && npm install"
   },
   "browserslist": [
     ">0.2%",
