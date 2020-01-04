@@ -1,7 +1,7 @@
 {
   "name": "telemark-portalen",
   "description": "Den gamle portalen for Telemark fylkeskommune",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "private": true,
   "repository": {
