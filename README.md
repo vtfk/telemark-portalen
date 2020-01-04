@@ -66,7 +66,9 @@ Innholdet brukeren får presentert avhenger av hvilke roller vedkommende har og 
 Etter at personen er innlogget gjøres det kall til ulike mikrotjenester for å hente denne informasjonen.
 
 Først hentes roller. Dette er en kombinasjon av grupperroller som avgjøres av innholdet i `companyName`.
-Deretter hentes lenker, snarveger og nyheter/artikler på bakgrunn av rollene. Se `Releaterte tjenester`for mer informasjon.
+Deretter hentes snarveger på bakgrunn av rollene.
+
+Snarverger er definert i [api/lib/data/shortcuts.json](api/lib/data/shortcuts.json)
 
 ## Deploy
 
@@ -81,10 +83,6 @@ $ npm run deploy
 ## Relaterte tjenester
 
 - [micro-portalen-roles](https://github.com/telemark/micro-portalen-roles) Mapper companyName til roller
-- [micro-portalen-shortcuts](https://github.com/telemark/micro-portalen-shortcuts) Gir shortcuts på bakgrunn av roller og plassering
-- [micro-portalen-links](https://github.com/telemark/micro-portalen-links) Gir lenker på bakrunn av roller og plassering
-- [micro-portalen-content](https://github.com/telemark/micro-portalen-content) Aggregerer nyheter og artikler på bakgrunn av roller
-- [micro-portalen-tasks](https://github.com/telemark/micro-portalen-tasks) Henter oppgaver fra ulike interne systemer på bakgrunn av innlogget bruker
 
 ## Lisens
 

@@ -1,4 +1,5 @@
 const axios = require('axios')
+const filterShortcuts = require('./filter-shortcuts')
 
 async function getRoles(company) {
   const { data } = await axios.get(
@@ -8,12 +9,7 @@ async function getRoles(company) {
 }
 
 async function getShortcuts(roles = [], ip) {
-  const { data } = await axios.get(
-    `https://shortcuts.portalen.win/shortcuts?roles=${roles.join('|')}${
-      ip ? `&myIp=${ip}` : ''
-    }`
-  )
-  return data
+  return filterShortcuts({ roles, ip })
 }
 
 module.exports = {

@@ -5,7 +5,9 @@
     "dayjs": "1.8.18",
     "jsonwebtoken": "8.5.1",
     "querystring": "0.2.0",
-    "uuid": "3.3.3"
+    "tfk-unique-array": "2.0.0",
+    "uuid": "3.3.3",
+    "wildcard": "2.0.0"
   },
   "scripts": {
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i"

@@ -1,0 +1,169 @@
+{
+  "administrasjonen": [
+    {
+      "title": "Citrix",
+      "description": "Logg inn på citrix",
+      "system": "Citrix",
+      "url": "https://login.t-fk.no",
+      "icon": "account_balance",
+      "excludeIps": ["139.164.*.*", "213.188.19.179"]
+    }
+  ],
+  "alle": [
+    {
+      "title": "Min side (Visma)",
+      "description": "Ferier, fravær, reiseregninger, fakturaer og økonomirapportering",
+      "system": "visma",
+      "url": "http://tfk-fh-visma01:8200/hrm/ansatt?0",
+      "icon": "assessment",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Sak/arkiv",
+      "description": "Sak/arkivsystemet",
+      "system": "p360",
+      "url": "http://public360/",
+      "icon": "library_books",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Min tid",
+      "description": "Tidsregistrering for ansatte",
+      "system": "Min tid",
+      "url": "http://tfk-fh-stempling01/MinWintid/",
+      "icon": "query_builder",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Office365",
+      "description": "Samhandlingsside med programmer fra Microsoft",
+      "system": "Office365",
+      "url": "https://portal.office.com",
+      "icon": "build"
+    },
+    {
+      "title": "Kvalitets- og internkontrollsystem",
+      "description": "TQM Enterprise",
+      "system": "compilo",
+      "url": "https://tqm11.tqmenterprise.no/tfk",
+      "icon": "control_point"
+    },
+    {
+      "title": "Framsikt",
+      "description": "Verktøy for analyse, budsjettering og økonomiplanlegging",
+      "system": "Framsikt",
+      "url": "https://www.framsikt.net/",
+      "icon": "note"
+    },
+    {
+      "title": "Læring",
+      "description": "Oversikt over interne kurs og elektronisk opplæringsmateriell",
+      "system": "Sharepoint",
+      "url": "https://vtfk.sharepoint.com/sites/arbrom/laering/Sider/default.aspx",
+      "icon": "school"
+    },
+    {
+      "title": "Servicetorget",
+      "description": "Servicetorg for IT, arkiv og kommunikasjon",
+      "system": "CS",
+      "url": "https://servicetorget.next.t-fk.no",
+      "icon": "contact_mail"
+    },
+    {
+      "title": "Innkjøp",
+      "description": "Informasjon om rammeavtaler, regelverk og terskelverdier",
+      "system": "Visma commerce",
+      "url": "https://portaleninfo.com/innkjop/",
+      "icon": "business_center",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Regnskap",
+      "description": "Informasjon om regelverk, veiledere og kurs",
+      "system": "Infoportalen",
+      "url": "http://portaleninfo.com/regnskap/",
+      "icon": "account_balance",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Klarspråk",
+      "description": "Vi velger klart språk",
+      "system": "Infoportalen",
+      "url": "https://portaleninfo.com/vi-velger-klart-sprak/",
+      "icon": "language",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+
+    {
+      "title": "Meld hendelse",
+      "description": "Her kan du melde avvik og uønskede hendelser i TQM",
+      "system": "compilo",
+      "url": "https://tqm11.tqmenterprise.no/tfk/CaseHandling/Cases/Overview?menu=SimpleRegistration",
+      "icon": "how_to_vote",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Styringsinformasjon",
+      "description": "De mest sentrale dokumentene i Telemark fylkeskommune",
+      "system": "CraftCMS",
+      "url": "https://portaleninfo.com/styringsinformasjon/",
+      "icon": "flag",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "Felles ansattportal",
+      "description": "Felles portal for ansatte i Vestfold og Telemark fylkeskommune",
+      "system": "Sharepoint",
+      "url": "https://portalen.vfk.no/sites/nyttfylke/Sider/Hjem.aspx",
+      "icon": "group",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    }
+  ],
+  "skole": [
+    {
+      "title": "Fronter",
+      "description": "Læringsplattform",
+      "system": "Fronter",
+      "url": "https://fronter.com/telemarkvgs/login/feide",
+      "icon": "note"
+    },
+    {
+      "title": "E-post",
+      "description": "Webmail for ansatte",
+      "system": "OWA",
+      "url": "https://outlook.office.com",
+      "icon": "email"
+    },
+    {
+      "title": "NDLA",
+      "description": "Nasjonal digital læringsarena",
+      "system": "NDLA",
+      "url": "https://ndla.no",
+      "icon": "extension"
+    },
+    {
+      "title": "MinElev",
+      "description": "Varsler og elevsamtaler",
+      "system": "MinElev",
+      "url": "https://www.minelev.no",
+      "icon": "build"
+    },
+    {
+      "title": "Elevmappa",
+      "description": "Tilgang til dine elevmapper",
+      "system": "Elevmappa",
+      "url": "https://elevmappa.vtfk.no",
+      "icon": "query_builder",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
+    }
+  ],
+  "tannhelse": [
+    {
+      "title": "E-post",
+      "description": "Webmail for ansatte",
+      "system": "OWA",
+      "url": "https://outlook.office.com",
+      "icon": "email"
+    }
+  ]
+}
