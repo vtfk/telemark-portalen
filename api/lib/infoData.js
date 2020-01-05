@@ -1,11 +1,8 @@
-const axios = require('axios')
+const filterRoles = require('./filter-roles')
 const filterShortcuts = require('./filter-shortcuts')
 
 async function getRoles(company) {
-  const { data } = await axios.get(
-    `https://roles.portalen.win/roles${company ? `?company=${company}` : ''}`
-  )
-  return data
+  return filterRoles({ company })
 }
 
 async function getShortcuts(roles = [], ip) {
