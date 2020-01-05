@@ -63,11 +63,12 @@ Ved neste gangs besøk vil lagret token (fra localstorage) brukes og innhold las
 
 Innholdet brukeren får presentert avhenger av hvilke roller vedkommende har og om hen er utenfor eller innenfor det interne nettverket.
 
-Etter at personen er innlogget gjøres det kall til ulike mikrotjenester for å hente denne informasjonen.
+Etter at personen er innlogget gjøres det kall til ulike mikrotjenester i [/api](/api) for å hente denne informasjonen.
 
 Først hentes roller. Dette er en kombinasjon av grupperroller som avgjøres av innholdet i `companyName`.
 Deretter hentes snarveger på bakgrunn av rollene.
 
+Roller er definert i [api/lib/data/roles.json](api/lib/data/roles.json)
 Snarverger er definert i [api/lib/data/shortcuts.json](api/lib/data/shortcuts.json)
 
 ## Deploy
