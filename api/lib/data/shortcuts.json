@@ -63,13 +63,6 @@
       "icon": "school"
     },
     {
-      "title": "Servicetorget",
-      "description": "Servicetorg for IT, arkiv og kommunikasjon",
-      "system": "CS",
-      "url": "https://servicetorget.next.t-fk.no",
-      "icon": "contact_mail"
-    },
-    {
       "title": "Innkjøp",
       "description": "Informasjon om rammeavtaler, regelverk og terskelverdier",
       "system": "Visma commerce",
