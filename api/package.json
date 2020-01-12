@@ -13,6 +13,6 @@
     "refresh": "rm -rf node_modules && rm package-lock.json && npm i"
   },
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=12.14.1"
   }
 }
