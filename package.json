@@ -54,7 +54,6 @@
     "lint": "eslint --no-eslintrc -c .eslintrc src api",
     "test": "react-scripts test --watchAll=false",
     "format": "prettier --write \"src/**/*.js\" \"api/**/*.js\" \"config-overrides.js\"",
-    "precommit": "pretty-quick --staged",
     "refresh": "rm -rf node_modules && rm -rf api/node_modules && rm package-lock.json && rm api/package-lock.json && npm i",
     "postinstall": "cd api && npm install"
   },
@@ -66,5 +65,10 @@
   ],
   "engines": {
     "node": ">=12.14.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
