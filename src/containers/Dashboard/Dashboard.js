@@ -27,7 +27,7 @@ const Dashboard = () => {
           og{' '}
           <strong>
             <a
-              href="https://portalen.vfk.no/"
+              href="https://portalen.vfk.no/sites/nyttfylke/Sider/Hjem.aspx"
               target="_blank"
               rel="noopener noreferrer"
             >
