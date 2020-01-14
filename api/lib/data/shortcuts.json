@@ -145,7 +145,7 @@
       "title": "Elevmappa",
       "description": "Tilgang til dine elevmapper",
       "system": "Elevmappa",
-      "url": "https://elevmappa.vtfk.no",
+      "url": "https://elevmappa.no",
       "icon": "query_builder",
       "includeIps": ["139.164.*.*", "213.188.19.179"]
     }
