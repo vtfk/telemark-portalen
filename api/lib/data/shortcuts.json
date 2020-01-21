@@ -7,6 +7,14 @@
       "url": "https://login.t-fk.no",
       "icon": "account_balance",
       "excludeIps": ["139.164.*.*", "213.188.19.179"]
+    },
+    {
+      "title": "For fylkeshuset",
+      "description": "Tjenester for de som jobber i administrasjonen",
+      "system": "Wordpress",
+      "url": "https://portaleninfo.com/for-fylkeshuset",
+      "icon": "account_balance",
+      "includeIps": ["139.164.*.*", "213.188.19.179"]
     }
   ],
   "alle": [
