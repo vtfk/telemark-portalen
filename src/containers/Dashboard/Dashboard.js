@@ -5,7 +5,12 @@ import PageWrapper from '../../components/PageWrapper'
 import Shortcuts from './Shortcuts'
 
 const Dashboard = data => {
-  const { company, roles } = data.data
+  let company
+  let roles
+  if (data && data.data) {
+    company = data.data.company
+    roles = data.data.roles
+  }
   return (
     <PageWrapper title="Forsiden">
       <Box mb={1}>
