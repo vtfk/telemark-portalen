@@ -1,9 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Typography, Box } from '@material-ui/core'
 import PageWrapper from '../../components/PageWrapper'
 import Shortcuts from './Shortcuts'
 
-const Dashboard = () => {
+const Dashboard = data => {
+  const { company, roles } = data.data
   return (
     <PageWrapper title="Forsiden">
       <Box mb={1}>
@@ -35,10 +37,18 @@ const Dashboard = () => {
             </a>
           </strong>
           .
+          <br />
+          {company && roles
+            ? `Du er logget inn med tilhørighet ${company} og snarvegrollene ${roles.join(
+                ', '
+              )}`
+            : null}
         </Typography>
       </Box>
     </PageWrapper>
   )
 }
 
-export default Dashboard
+export default connect(state => ({
+  data: state.user.data
+}))(Dashboard)
