@@ -1,4 +1,4 @@
-const proxy = require('http-proxy-middleware')
+const proxy = require('http-proxy-middleware').createProxyMiddleware
 
 const target = process.env.REACT_APP_LIVEURL
 
