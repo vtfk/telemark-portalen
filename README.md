@@ -19,11 +19,11 @@ Er altså en react-app med følgende hovedkomponenter:
 
 ## Utvikle lokalt
 
-### Med `now dev`
+### Med `vercel dev`
 
 Oppdatert din `.env` fil med riktig info, se `.env-local` for påkrevede env-variabler. Merk at de fleste av env-variablene er for backend servicene.
 
-Merk at `now dev` ennå ikke fungerer så gått i forhold til å redigere frontend-app med hot-reload osv, så det egner seg best når man skal teste at backend servicene fungerer.
+Merk at `vercel dev` ennå ikke fungerer så gått i forhold til å redigere frontend-app med hot-reload osv, så det egner seg best når man skal teste at backend servicene fungerer.
 
 Kjør `npm i` også i /api mappen
 
@@ -33,14 +33,14 @@ Legg inn denne i `.env`
 REACT_APP_LIVEURL=http://localhost:3000
 ```
 
-Start dev-miljøet med `npm run dev`
+Start dev-miljøet med `vc dev`
 
 Først starter backendmiljøet opp på port 3000 og deretter kommer frontend opp på tilfeldig port.
 Alt vises i konsollen.
 
 ### Med `npm start`
 
-Man må først har gjort en deploy med `now` til en url, også bruker man [Proxy funksjonen i CRA](https://create-react-app.dev/docs/proxying-api-requests-in-development) for å sende alle /api requester til en kjørene instans hos now. Så legg inn url slik i din `.env` fil:
+Man må først har gjort en deploy med `vercel` til en url, også bruker man [Proxy funksjonen i CRA](https://create-react-app.dev/docs/proxying-api-requests-in-development) for å sende alle /api requester til en kjørene instans hos now. Så legg inn url slik i din `.env` fil:
 
 ```
 REACT_APP_LIVEURL=https://portalen-craco.gerhardsletten.now.sh
