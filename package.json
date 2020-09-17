@@ -42,7 +42,7 @@
     "pretty-quick": "3.0.0",
     "react-app-rewired": "2.1.6",
     "react-scripts": "3.4.3",
-    "webpack-bundle-analyzer": "3.8.0"
+    "webpack-bundle-analyzer": "3.9.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
